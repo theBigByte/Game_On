@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <div class="col xs 12">
+      <h3 style="color:whitesmoke">{{Sell | uppercase}}</h3>
+    </div>
+  </div>
+</div>
+<div class="col-xs-6">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+  <div class="form-group-item">
+    <label for="name" class="cols-sm-2 control-label" style="color:whitesmoke">Game Name :</label>    
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <input [(ngModel)]='name' 
+      type="text" 
+      class="form-control" 
+      name="name" 
+      id="name"  
+      placeholder="Enter Game Name" 
+      style="background-color:rgba(245, 245, 245, 0.4);color:white"
+      ngModel
+      required
+      #named="ngModel"/>
+  </div>
+  <span class="alert" *ngIf = "!named.valid && named.touched" style="color:Red">Please enter a name</span>        
+  </div>
+  <br>
+  <div class="form-group-item">
+    <label for="name" class="cols-sm-2 control-label" style="color:whitesmoke">Game Type :</label>    
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <input [(ngModel)]="detail" 
+      type="text"
+      class="form-control" 
+      name="type"
+      id="name"  
+      placeholder="Enter Game Type" 
+      style="background-color:rgba(245, 245, 245, 0.4);color:white"
+      ngModel/>   
+  </div>
+  </div>
+  <br>
+  <div class="form-group-item">
+    <label for="name" class="cols-sm-2 control-label" style="color:whitesmoke">Game Quantity :</label>    
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <input [(ngModel)]="quantity"
+      type="text"
+      class="form-control"
+      name="quantity"
+      id="name"
+      placeholder="Enter Quantity"
+      style="background-color:rgba(245, 245, 245, 0.4);color:white"
+      ngModel/>      
+      </div>
+  </div>
+  <br>
+  <div class="form-group-item">
+    <label for="name" class="cols-sm-2 control-label" style="color:whitesmoke">Price :</label>    
+    <div class="input-group">
+      <span class="input-group-addon"></span>
+      <input [(ngModel)]="price"
+      type="text"
+      class="form-control"
+      name="price"
+      id="name"
+      placeholder="Enter Selling Price"
+      style="background-color:rgba(245, 245, 245, 0.4);color:rgb(15, 15, 15)"
+      ngModel
+      required
+      #pricing = "ngModel"/>      
+  </div>
+  <div class="row">
+    <span class="alert" *ngIf = "!pricing.valid && pricing.touched" style="color:orange"><strong>Warning!! </strong>Please set some Price to your item</span>      
+  </div>
+  </div>
+  <br>
+  <button 
+  class="btn btn-warning" 
+  type="submit" 
+  style="color:black"
+  [disabled]="!f.valid">
+  Submit
+</button>
+</form>
+</div>
+<div class="col-xs-6 ; bottomRight; pull-right"  *ngIf = "submitted">
+  <h2 style="color:whitesmoke">Name: {{sellItem.name}}</h2>
+  <h3 style="color:whitesmoke">Type: {{sellItem.detail}}</h3>
+  <h4 style="color:whitesmoke">Quantity: {{sellItem.quantity}}</h4>
+  <h2 style="color:whitesmoke" class="badge">Price: {{sellItem.price | currency}}</h2>
+</div>

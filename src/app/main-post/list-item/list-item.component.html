@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-xs-12">
+   <app-clickable-item
+    *ngFor ="let game of gamelist; let i = index"
+    [clickItem]="game"
+    [index]="i"></app-clickable-item>
+  </div>
+</div>

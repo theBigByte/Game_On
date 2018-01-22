@@ -1,0 +1,12 @@
+<a class="list-group-item clearfix"
+[routerLink]="[index]"
+routerLinkActive = "RedActive">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{clickItem.name}}</h4>
+    <p class="list-group-item-detail"
+     style=" max-width:315px">{{ (clickItem.desc.length>50)? (clickItem.desc | slice:0:50)+'...':(clickItem.desc) }}</p>
+  </div>
+  <span class="pull-right">
+    <img [src]="clickItem.imgUrl" alt="Image" class="img-responsive" style="max-height: 70px">
+  </span>
+</a>

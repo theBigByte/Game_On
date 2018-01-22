@@ -1,0 +1,11 @@
+.black{
+    background-color: rgb(36, 34, 34);
+}
+
+.active a{
+    color: rgb(251, 252, 248) !important;
+}
+
+.change a{
+    background-color: yellow;
+}

@@ -1,0 +1,17 @@
+body, html{
+    height: 100%;
+}
+
+.full{
+    background-color: black;
+    height: 100%;
+}
+
+.full{
+    background:url('http://monodomo.com/free-wallpapers/pc-gaming-wallpapers-for-iphone-For-Free-Wallpaper.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
