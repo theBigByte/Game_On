@@ -7,18 +7,19 @@ import { BuyGameComponent } from './buy-game/buy-game.component';
 import { CartComponent } from './cart/cart.component';
 import { StartcomponentComponent } from './startcomponent/startcomponent.component';
 import { SellGameComponent } from './sell-game/sell-game.component';
+import { FirstpageComponent } from './firstpage/firstpage.component';
 
 const gameRoutes: Routes = [
-    {path:'', redirectTo: '/main',pathMatch:'full'},
+    {path:'', redirectTo: '/homepage',pathMatch:'full'},
     {path:'main',component:MainPostComponent, children:[
         {path:'',component:StartcomponentComponent},
         {path:':id',component:DetailPostComponent}
     ]},
     {path: 'buy',component:BuyGameComponent},
     {path:'sell',component:SellGameComponent},
-    {path: 'cart',component:CartComponent}
+    {path: 'cart',component:CartComponent},
+    {path: 'homepage',component:FirstpageComponent}
 ]
-
 @NgModule({
     imports: [RouterModule.forRoot(gameRoutes)],
     exports: [RouterModule]

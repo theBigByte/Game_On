@@ -1,0 +1,8 @@
+.mainBackground{
+    background-image: url("http://kb4images.com/images/gta-5-wallpaper-hd/36253296-gta-5-wallpaper-hd.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}

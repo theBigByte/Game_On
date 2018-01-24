@@ -20,6 +20,8 @@ import { SellGameComponent } from './sell-game/sell-game.component';
 import { headerDirective } from './shared/header.directive';
 import { FormsModule } from '@angular/forms';
 import { gameListService } from './shared/gameList.service';
+import { colorChangeDirective } from './shared/itemColorChange.directive';
+import { FirstpageComponent } from './firstpage/firstpage.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { gameListService } from './shared/gameList.service';
     StartcomponentComponent,
     SellGameComponent,
     headerDirective,
+    colorChangeDirective,
+    FirstpageComponent
   ],
   imports: [
     BrowserModule,
