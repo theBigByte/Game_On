@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { gameListService } from './shared/gameList.service';
 import { colorChangeDirective } from './shared/itemColorChange.directive';
 import { FirstpageComponent } from './firstpage/firstpage.component';
+import { serverService } from './shared/server.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -44,8 +46,9 @@ import { FirstpageComponent } from './firstpage/firstpage.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpModule
   ],
-  providers: [cartService,gameService],
+  providers: [cartService,gameService,serverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

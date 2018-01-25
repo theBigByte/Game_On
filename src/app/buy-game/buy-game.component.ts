@@ -1,6 +1,8 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { gameBuy } from '../shared/buygame.model';
 import { gameService } from '../shared/buygame.service';
+import { serverService } from '../shared/server.service';
+import { cartModel } from '../shared/cart.model';
 
 @Component({
   selector: 'app-buy-game',
@@ -9,9 +11,10 @@ import { gameService } from '../shared/buygame.service';
 })
 export class BuyGameComponent implements OnInit {
 
-  @Input() buy:gameBuy[];
+  buy:gameBuy[];
+  
 
-  constructor(private service: gameService) { }
+  constructor(private service: gameService,private httpServ:serverService) { }
 
   ngOnInit() {
     this.buy = this.service.getBuyingList();
